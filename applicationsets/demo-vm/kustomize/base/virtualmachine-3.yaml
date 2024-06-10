@@ -1,12 +1,12 @@
 apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
-  name: demo-vm-2
+  name: demo-vm-3
 spec:
   running: true
   dataVolumeTemplates:
   - metadata:
-      name: demo-vm-2-ds-fedora
+      name: demo-vm-3-ds-fedora
     spec:
       sourceRef:
         kind: DataSource
@@ -17,7 +17,7 @@ spec:
   template:
     metadata:
       labels:
-        vm-name: demo-vm-2
+        vm-name: demo-vm-3
         vm: demo-vm
     spec:
       terminationGracePeriodSeconds: 180
@@ -40,8 +40,8 @@ spec:
           guest: 1024M
       volumes:
       - dataVolume:
-          name: demo-vm-2-ds-fedora
-        name: demo-vm-2-ds-fedora
+          name: demo-vm-3-ds-fedora
+        name: demo-vm-3-ds-fedora
       - cloudInitNoCloud:
           userData: |-
             #cloud-config
