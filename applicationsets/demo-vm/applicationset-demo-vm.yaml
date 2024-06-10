@@ -10,6 +10,9 @@ spec:
       - appName: dev-demo-vm
         gitPath: dev
         namespace: dev-demo-vm
+      - appName: dev-demo-vm-2
+        gitPath: dev
+        namespace: dev-demo-vm-2
       - appName: prod-demo-vm
         gitPath: prod
         namespace: prod-demo-vm
